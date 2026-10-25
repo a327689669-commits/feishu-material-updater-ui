@@ -3,13 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#f5f7fb" />
   <title>物料齐套每日更新</title>
-  <script type="module" crossorigin src="./assets/index-Bxqp2ClG.js"></script>
+  <script type="module" crossorigin src="./assets/index-w8NkV_yJ.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-tJx3RTD2.css">
 </head>
 <body>
-  <main>
-    <h1>物料齐套每日更新</h1>
-    <p id="status">正在连接飞书表…</p>
+  <main class="panel">
+    <header class="head">
+      <div class="eyebrow">每日更新</div>
+      <h1>物料齐套</h1>
+      <p>选择当天报表，核对结果后更新飞书表。</p>
+    </header>
+    <section class="card">
+      <div class="section-title">1 选择文件</div>
+      <label class="file-row"><span>物料可用性报告</span><input id="availability" type="file" accept=".xlsx,.xls" /></label>
+      <label class="file-row"><span>车间排产表 <small>可多选，含跨月</small></span><input id="plans" type="file" accept=".xlsx,.xls" multiple /></label>
+      <label class="file-row"><span>来料检验记录</span><input id="inspection" type="file" accept=".xlsx,.xls" /></label>
+      <label class="date-row"><span>计算日期</span><input id="as-of" type="date" /></label>
+      <button id="preview" class="secondary">生成预览</button>
+    </section>
+    <section class="card result" id="result" hidden>
+      <div class="section-title">2 核对结果</div>
+      <div id="summary"></div>
+      <button id="update" class="primary" disabled>更新飞书表</button>
+    </section>
+    <div class="status" id="status" role="status">正在连接飞书表…</div>
+    <p class="foot">只按排产工单判断齐套；当前库存参与计算，未入库来料仅供复查。线上结果更新后保留人工填写内容。</p>
   </main>
 </body>
 </html>
