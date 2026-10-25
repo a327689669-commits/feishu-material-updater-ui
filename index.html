@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#f5f7fb" />
   <title>物料齐套每日更新</title>
-  <script type="module" crossorigin src="./assets/index-Di4V3_Nl.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-C2giuE_b.css">
+  <script type="module" crossorigin src="./assets/index-C2aYvyYT.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-fF3FZIqd.css">
 </head>
 <body>
   <main class="panel">
@@ -17,11 +17,14 @@
     </header>
     <section class="card">
       <div class="section-title">1 选择文件</div>
+      <button id="open-picker" class="secondary" disabled>打开文件选择窗口</button>
+      <div id="file-controls">
       <div class="file-row"><span>物料可用性报告</span><div class="file-action"><button type="button" data-file-target="availability" class="choose">选择文件</button><span id="availability-name" class="file-name">未选择</span><input id="availability" type="file" accept=".xlsx,.xls" hidden /></div></div>
       <div class="file-row"><span>车间排产表 <small>可多选，含跨月</small></span><div class="file-action"><button type="button" data-file-target="plans" class="choose">选择文件</button><span id="plans-name" class="file-name">未选择</span><input id="plans" type="file" accept=".xlsx,.xls" multiple hidden /></div></div>
       <div class="file-row"><span>来料检验记录</span><div class="file-action"><button type="button" data-file-target="inspection" class="choose">选择文件</button><span id="inspection-name" class="file-name">未选择</span><input id="inspection" type="file" accept=".xlsx,.xls" hidden /></div></div>
       <label class="date-row"><span>计算日期</span><input id="as-of" type="date" /></label>
       <button id="preview" class="secondary" disabled>生成预览</button>
+      </div>
     </section>
     <section class="card result" id="result" hidden>
       <div class="section-title">2 核对结果</div>
